@@ -4466,3 +4466,15 @@ a.cqc-value:hover {
   .fc-bouquet-glass { width: 195px; height: 195px; }
 }
 
+
+/* Fix for overlapping hero sections on mobile devices due to flex center alignment */
+@media (max-width: 1024px) {
+  .hero-premium, .hero-shop-premium, .hero-about-premium, .hero-services-premium, .hero-blog-premium, .hero-contact-premium {
+    align-items: flex-start !important;
+    height: auto !important;
+    min-height: 100vh; /* Keeps it full height if content is small */
+  }
+  .hero-container-premium, .hero-container-shop, .hero-container-about, .hero-container-services, .hero-container-blog, .hero-container-contact {
+    margin-top: 40px; 
+  }
+}
