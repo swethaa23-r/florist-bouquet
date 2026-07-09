@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* Light Theme Colors */
@@ -3223,7 +3223,7 @@ body:not(.home-page) #loader { display: none !important; }
   padding-bottom: 55px;
 }
 
-/* ── "Blooming" gradient highlight ── */
+/* -- "Blooming" gradient highlight -- */
 .highlight-blooming {
   position: relative;
   background: linear-gradient(130deg, var(--color-primary) 15%, #c84b8a 55%, var(--color-accent) 100%);
@@ -3248,7 +3248,7 @@ body:not(.home-page) #loader { display: none !important; }
   animation-delay: 1.5s;
 }
 
-/* ── Quick Stats Strip ── */
+/* -- Quick Stats Strip -- */
 .blog-quick-stats {
   display: flex;
   align-items: center;
@@ -3287,7 +3287,7 @@ body:not(.home-page) #loader { display: none !important; }
   color: var(--color-text-muted);
 }
 
-/* ── Right editorial visual ── */
+/* -- Right editorial visual -- */
 .hero-visual-right-blog {
   position: relative;
   display: flex;
@@ -3375,7 +3375,7 @@ body:not(.home-page) #loader { display: none !important; }
   animation-delay: 0.3s;
 }
 
-/* ── Category Navigation Strip ── */
+/* -- Category Navigation Strip -- */
 .blog-category-nav {
   position: relative;
   z-index: 5;
@@ -3426,7 +3426,7 @@ body:not(.home-page) #loader { display: none !important; }
   transform: translateY(-2px);
 }
 
-/* ── Responsive ── */
+/* -- Responsive -- */
 @media (max-width: 1024px) {
   .hero-container-blog {
     grid-template-columns: 1fr;
@@ -3491,7 +3491,7 @@ body:not(.home-page) #loader { display: none !important; }
   padding-bottom: 60px;
 }
 
-/* ── Quick Info List ── */
+/* -- Quick Info List -- */
 .contact-quick-info {
   display: flex;
   flex-direction: column;
@@ -3533,7 +3533,7 @@ body:not(.home-page) #loader { display: none !important; }
   line-height: 1.3;
 }
 
-/* ── Right Visual Column ── */
+/* -- Right Visual Column -- */
 .hero-visual-right-contact {
   position: relative;
   display: flex;
@@ -3637,7 +3637,7 @@ body:not(.home-page) #loader { display: none !important; }
   animation-delay: 0.3s;
 }
 
-/* ── Quick-Action Contact Card (below hero image) ── */
+/* -- Quick-Action Contact Card (below hero image) -- */
 .contact-quick-card-wrap {
   position: relative;
   z-index: 5;
@@ -3727,7 +3727,7 @@ a.cqc-value:hover {
   align-items: center;
 }
 
-/* ── Responsive ── */
+/* -- Responsive -- */
 @media (max-width: 1024px) {
   .hero-container-contact {
     grid-template-columns: 1fr;
@@ -3769,10 +3769,10 @@ a.cqc-value:hover {
 }
 
 /* ============================================================
-   CINEMATIC SUNSET FOOTER — Flower Garden at Dusk
+   CINEMATIC SUNSET FOOTER � Flower Garden at Dusk
    ============================================================ */
 
-/* ── Base ── */
+/* -- Base -- */
 .footer-cinematic {
   position: relative;
   overflow: hidden;
@@ -3788,7 +3788,7 @@ a.cqc-value:hover {
   padding-top: 90px;
 }
 
-/* ── Canvas (fireflies + petals) ── */
+/* -- Canvas (fireflies + petals) -- */
 .footer-canvas {
   position: absolute;
   inset: 0;
@@ -3798,7 +3798,7 @@ a.cqc-value:hover {
   z-index: 0;
 }
 
-/* ── Background layers ── */
+/* -- Background layers -- */
 .fc-bg-gradient {
   position: absolute;
   inset: 0;
@@ -3878,7 +3878,7 @@ a.cqc-value:hover {
 }
 .fc-bb-top { top: 0; }
 
-/* ── Inner container ── */
+/* -- Inner container -- */
 .fc-inner {
   position: relative;
   z-index: 10;
@@ -3888,7 +3888,7 @@ a.cqc-value:hover {
   gap: 0;
 }
 
-/* ━━━ TOP CTA SECTION ━━━ */
+/* ??? TOP CTA SECTION ??? */
 .fc-cta-section {
   text-align: center;
   padding: 0 20px 60px;
@@ -3981,7 +3981,7 @@ a.cqc-value:hover {
   box-shadow: 0 12px 28px rgba(0,0,0,0.10);
 }
 
-/* ━━━ FLOATING BOUQUET ━━━ */
+/* ??? FLOATING BOUQUET ??? */
 .fc-bouquet-section {
   position: relative;
   width: 380px;
@@ -4086,7 +4086,7 @@ a.cqc-value:hover {
   to   { transform: rotate(-360deg) translateX(175px) rotate(360deg); }
 }
 
-/* ━━━ FOUR GLASS CARDS ━━━ */
+/* ??? FOUR GLASS CARDS ??? */
 .fc-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -4173,7 +4173,7 @@ a.cqc-value:hover {
 }
 
 .fc-card-list a::before {
-  content: '✦';
+  content: '?';
   font-size: 0.45rem;
   color: #D8B46A;
   margin-right: 0;
@@ -4216,7 +4216,7 @@ a.cqc-value:hover {
 }
 .fc-contact-list a:hover { color: #fff; }
 
-/* ━━━ NEWSLETTER ━━━ */
+/* ??? NEWSLETTER ??? */
 .fc-newsletter-box {
   width: 100%;
   max-width: 680px;
@@ -4313,7 +4313,7 @@ a.cqc-value:hover {
 }
 .fc-nl-btn-icon { font-size: 1rem; animation: fcBouquetFloat 2s infinite ease-in-out; }
 
-/* ━━━ SOCIAL SECTION ━━━ */
+/* ??? SOCIAL SECTION ??? */
 .fc-social-section {
   text-align: center;
   margin-bottom: 70px;
@@ -4382,7 +4382,7 @@ a.cqc-value:hover {
   100% { width: 90px; height: 90px; opacity: 0; }
 }
 
-/* ━━━ BOTTOM BAR ━━━ */
+/* ??? BOTTOM BAR ??? */
 .fc-bottom-bar {
   position: relative;
   z-index: 10;
@@ -4425,13 +4425,13 @@ a.cqc-value:hover {
   font-size: 0.8rem;
 }
 
-/* ── Shared fadeUp animation ── */
+/* -- Shared fadeUp animation -- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── RESPONSIVE ── */
+/* -- RESPONSIVE -- */
 @media (max-width: 1100px) {
   .fc-cards-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -4470,11 +4470,14 @@ a.cqc-value:hover {
 /* Fix for overlapping hero sections on mobile devices due to flex center alignment */
 @media (max-width: 1024px) {
   .hero-premium, .hero-shop-premium, .hero-about-premium, .hero-services-premium, .hero-blog-premium, .hero-contact-premium {
-    align-items: flex-start !important;
+    display: block !important;
     height: auto !important;
-    min-height: 100vh; /* Keeps it full height if content is small */
+    min-height: auto !important;
+    padding-bottom: 60px !important;
+    padding-top: 130px !important;
   }
   .hero-container-premium, .hero-container-shop, .hero-container-about, .hero-container-services, .hero-container-blog, .hero-container-contact {
-    margin-top: 40px; 
+    margin-top: 0; 
   }
 }
+
