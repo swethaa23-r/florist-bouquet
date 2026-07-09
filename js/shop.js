@@ -101,16 +101,17 @@ function setupEventListeners() {
   // Modal Actions
   const btnAdd = document.getElementById('modalAddToCart');
   if(btnAdd) {
-    btnAdd.addEventListener('click', () => {
+    const newBtnAdd = btnAdd.cloneNode(true);
+    btnAdd.parentNode.replaceChild(newBtnAdd, btnAdd);
+    newBtnAdd.addEventListener('click', () => {
       if(currentModalProduct) {
-        if(typeof window.showToast === 'function') {
-          window.showToast(`Added ${currentModalQty}x ${currentModalProduct.name} to Cart!`);
-        }
-        const cartBadge = document.getElementById('cartBadge');
-        if (cartBadge) {
-          cartBadge.style.display = 'inline-block';
-          let currentCount = parseInt(cartBadge.textContent || "0");
-          cartBadge.textContent = currentCount + currentModalQty;
+        if(typeof window.addToCart === 'function') {
+          window.addToCart({
+            name: currentModalProduct.name,
+            price: currentModalProduct.price,
+            img: currentModalProduct.image,
+            qty: currentModalQty
+          });
         }
         closeQuickView();
       }
@@ -212,7 +213,7 @@ function renderProducts() {
         </div>
         
         <div style="display: flex;">
-          <button style="flex: 1; padding: 12px; background: #ffc107; color: #333; border: none; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" onclick="if(typeof window.showToast === 'function'){window.showToast('Added ${p.name} to Cart!');} let cb=document.getElementById('cartBadge'); if(cb){cb.style.display='inline-block'; cb.textContent=parseInt(cb.textContent||'0')+1;}"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+          <button style="flex: 1; padding: 12px; background: #ffc107; color: #333; border: none; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" onclick="if(typeof window.addToCart === 'function'){window.addToCart({name: '${p.name.replace(/'/g, "\\'")}', price: ${p.price}, img: '${p.image}', qty: 1});}"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
           <button style="flex: 1; padding: 12px; background: #333; color: white; border: none; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" onclick="window.location.href='checkout.html'"><i class="fa-solid fa-bolt"></i> Buy Now</button>
         </div>
 

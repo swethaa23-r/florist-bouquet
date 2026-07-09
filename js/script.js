@@ -412,8 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  let cartCount = 0;
-  const cartBadge = document.getElementById('cartBadge');
+  window.updateCartBadge();
 
   actionBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -424,15 +423,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const productCard = btn.closest('.product-card');
       
       if (title === 'Add to Cart') {
-        cartCount++;
-        if(cartBadge) {
-          cartBadge.innerText = cartCount;
-          cartBadge.style.display = 'block';
-          cartBadge.style.transition = 'transform 0.2s';
-          cartBadge.style.transform = 'scale(1.3)';
-          setTimeout(() => cartBadge.style.transform = 'scale(1)', 200);
+        let name = "Premium Bouquet";
+        let price = 85.00;
+        let img = "";
+        if (productCard) {
+            name = productCard.querySelector('.product-title').innerHTML.replace(/<br\s*[\/]?>/gi, ' ').trim();
+            const priceText = productCard.querySelector('.product-price').innerText;
+            price = parseFloat(priceText.replace(/[^0-9.]/g, '')) || 0;
+            img = productCard.querySelector('img').src;
         }
-        window.showToast('Added to Cart!');
+        window.addToCart({ name, price, img, qty: 1 });
       } else if (title === 'Wishlist') {
         const icon = btn.querySelector('i');
         if (icon && icon.classList.contains('fa-regular')) {
@@ -459,7 +459,58 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const modalAddToCartBtn = document.getElementById('modalAddToCart');
+  if (modalAddToCartBtn) {
+    modalAddToCartBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('modalTitle').innerText.trim();
+      const priceText = document.getElementById('modalPrice').innerText;
+      const price = parseFloat(priceText.replace(/[^0-9.]/g, '')) || 0;
+      const img = document.getElementById('modalImg').src;
+      window.addToCart({ name, price, img, qty: 1 });
+    });
+  }
 });
+
+// Global Cart Functions
+window.getCart = function() {
+  return JSON.parse(localStorage.getItem('stackly_cart') || '[]');
+};
+
+window.saveCart = function(cart) {
+  localStorage.setItem('stackly_cart', JSON.stringify(cart));
+  window.updateCartBadge();
+};
+
+window.updateCartBadge = function() {
+  const cart = window.getCart();
+  const count = cart.reduce((sum, item) => sum + item.qty, 0);
+  const cartBadge = document.getElementById('cartBadge');
+  if(cartBadge) {
+    if (count > 0) {
+      cartBadge.innerText = count;
+      cartBadge.style.display = 'block';
+      cartBadge.style.transition = 'transform 0.2s';
+      cartBadge.style.transform = 'scale(1.3)';
+      setTimeout(() => cartBadge.style.transform = 'scale(1)', 200);
+    } else {
+      cartBadge.style.display = 'none';
+    }
+  }
+};
+
+window.addToCart = function(product) {
+  const cart = window.getCart();
+  const existing = cart.find(item => item.name === product.name);
+  if(existing) {
+    existing.qty += product.qty;
+  } else {
+    cart.push(product);
+  }
+  window.saveCart(cart);
+  window.showToast('Added to Cart!');
+};
 
 // Global function to show toast
 window.showToast = function(message) {
