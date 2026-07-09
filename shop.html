@@ -1,0 +1,645 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop luxury handcrafted flower bouquets at Stackly">
+  <title>Shop | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <i class="fa-solid fa-seedling loader-icon"></i>
+    <b><p>Fresh Flowers. Elegant Bouquets. Fast Delivery</p></b>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="login.html"><i class="fa-regular fa-user" title="Account"></i></a>
+        <a href="cart.html" style="position: relative;">
+          <i class="fa-solid fa-cart-shopping" title="Cart"></i>
+          <span id="cartBadge" style="position: absolute; top: -10px; right: -10px; background: var(--color-accent); color: white; font-size: 0.75rem; padding: 2px 6px; border-radius: 12px; font-weight: bold; display: none;">0</span>
+        </a>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Shop Hero Section -->
+  <header class="hero-shop-premium">
+    <!-- Background Effects -->
+    <div class="hero-bg-shapes">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="glass-circle circle-1"></div>
+      <div class="glass-circle circle-2"></div>
+      <div class="sparkle-particles" id="sparkles-container"></div>
+      
+      <!-- Decorative Botanical SVGs with very low opacity -->
+      <svg class="botanical-outline outline-left" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,90 Q30,60 50,80 T90,50" stroke="rgba(94, 139, 126, 0.05)" stroke-width="0.8"/>
+      </svg>
+      <svg class="botanical-outline outline-right" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5,40 Q25,20 45,30 T85,10" stroke="rgba(232, 93, 117, 0.05)" stroke-width="0.8"/>
+      </svg>
+    </div>
+
+    <div class="container hero-container-shop">
+      <!-- Left Side Content -->
+      <div class="hero-content-left">
+        <div class="badge-premium" data-aos="fade-down" data-aos-delay="100">
+          <span>🌸 Fresh Flowers Delivered Daily</span>
+        </div>
+        
+        <h1 class="hero-title-premium" data-aos="fade-up" data-aos-delay="200">
+          Find Your Perfect<br>
+          <span class="highlight-bloom">Bloom</span> Collection
+        </h1>
+        
+        <p class="hero-subtitle-premium" data-aos="fade-up" data-aos-delay="300">
+          Explore handcrafted bouquets, elegant floral arrangements, indoor plants, gift hampers, and seasonal collections designed for every celebration.
+        </p>
+        
+        <div class="hero-btns-premium" data-aos="fade-up" data-aos-delay="400">
+          <a href="#shopProducts" class="btn-premium btn-premium-primary">
+            Shop Collection <span class="arrow">→</span>
+          </a>
+          <a href="#filterSection" class="btn-premium btn-premium-secondary">
+            Explore Categories
+          </a>
+        </div>
+        
+        <!-- Quick Features -->
+        <div class="quick-features-row" data-aos="fade-up" data-aos-delay="500">
+          <span class="feature-item"><i class="fa-solid fa-circle-check"></i> Same Day Delivery</span>
+          <span class="feature-item"><i class="fa-solid fa-circle-check"></i> Fresh Farm Flowers</span>
+          <span class="feature-item"><i class="fa-solid fa-circle-check"></i> Secure Checkout</span>
+        </div>
+      </div>
+
+      <!-- Right Side Visual -->
+      <div class="hero-visual-right" data-aos="zoom-in" data-aos-delay="300">
+        <!-- Glowing Circular Backgrounds -->
+        <div class="glow-bg"></div>
+        <div class="glow-bg-secondary"></div>
+        
+        <!-- Large Floating Glass Card -->
+        <div class="glass-backdrop-shop"></div>
+        
+        <!-- Bouquet Container -->
+        <div class="bouquet-float-wrap">
+          <img src="assets/shop_hero_bouquet.jpg" alt="Premium luxury bouquet collection" class="bouquet-img-premium">
+        </div>
+
+        <!-- Floating Flower Elements around the bouquet -->
+        <span class="floating-flower rose-1" data-speed="1.5">🌹</span>
+        <span class="floating-flower tulip-1" data-speed="-1.2">🌷</span>
+        <span class="floating-flower lily-1" data-speed="1.8">🌼</span>
+        <span class="floating-flower orchid-1" data-speed="-1.4">🌸</span>
+        <span class="floating-flower leaf-1" data-speed="2.0">🌿</span>
+        <span class="floating-flower leaf-2" data-speed="-1.6">🍃</span>
+
+        <!-- Floating Info Cards -->
+        <div class="floating-card card-top-right glass-card-premium" data-speed="1.8">
+          <span class="card-emoji">🌷</span>
+          <span class="card-text">150+ Premium Bouquets</span>
+        </div>
+        
+        <div class="floating-card card-bottom-left glass-card-premium" data-speed="-1.5">
+          <span class="card-emoji">🚚</span>
+          <span class="card-text">Same Day Delivery</span>
+        </div>
+        
+        <div class="floating-card card-bottom-right glass-card-premium" data-speed="1.3">
+          <span class="card-emoji">⭐</span>
+          <span class="card-text">Rated 4.9 by Customers</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Section (Below Hero Content) -->
+    <div class="hero-search-section container" id="filterSection" data-aos="fade-up" data-aos-delay="500">
+      <div class="search-bar-wrap glass">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search bouquets, flowers, gifts..." oninput="handleFilters()">
+      </div>
+      
+      <!-- Filter Chips -->
+      <div class="filter-chips-wrap">
+        <button class="filter-chip active" data-value="all">✨ All Products</button>
+        <button class="filter-chip" data-value="roses">🌹 Roses</button>
+        <button class="filter-chip" data-value="mixed">💐 Bouquets</button>
+        <button class="filter-chip" data-value="lilies">🌼 Lilies</button>
+        <button class="filter-chip" data-value="sunflowers">🌻 Sunflowers</button>
+        <button class="filter-chip" data-value="orchids">🌸 Orchids</button>
+        <button class="filter-chip" data-value="gifts">🎁 Gift Hampers</button>
+        <button class="filter-chip" data-value="plants">🌿 Indoor Plants</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sleek Horizontal Sticky Filter Bar -->
+  <div class="sticky-filter-bar glass">
+    <div class="container filter-bar-container">
+      
+      <div class="filter-dropdown-group">
+        <label for="occasionSelect"><i class="fa-solid fa-gift"></i> Occasion</label>
+        <select id="occasionSelect" onchange="handleFilters()">
+          <option value="all">All Occasions</option>
+          <option value="birthday">Birthday</option>
+          <option value="anniversary">Anniversary</option>
+          <option value="wedding">Wedding</option>
+          <option value="sympathy">Sympathy</option>
+        </select>
+      </div>
+
+      <div class="filter-dropdown-group">
+        <label for="priceSelect"><i class="fa-solid fa-tags"></i> Price Range</label>
+        <select id="priceSelect" onchange="handleFilters()">
+          <option value="all">All Prices</option>
+          <option value="under50">Under $50</option>
+          <option value="50to100">$50 - $100</option>
+          <option value="100to150">$100 - $150</option>
+          <option value="150to200">$150 - $200</option>
+          <option value="over200">Over $200</option>
+        </select>
+      </div>
+
+      <div class="filter-dropdown-group">
+        <label for="sortSelect"><i class="fa-solid fa-arrow-down-wide-short"></i> Sort By</label>
+        <select id="sortSelect" onchange="handleFilters()">
+          <option value="newest">Newest Arrivals</option>
+          <option value="default">Default Sort</option>
+          <option value="price">Price: Low to High</option>
+          <option value="popularity">Popularity (Rating)</option>
+        </select>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Shop Layout -->
+  <div class="container" style="padding: 30px 0 60px 0;">
+
+    <!-- Main Content -->
+    <main class="shop-main zoom-in" style="width: 100%;">
+      <div id="shopProducts" class="shop-products">
+        <!-- Products injected by shop.js -->
+      </div>
+
+      <div id="pagination" class="pagination" style="margin-top: 50px; display: flex; justify-content: center; gap: 10px; align-items: center;">
+        <!-- Pagination injected by shop.js -->
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Quick View Modal (Advanced Product Details) -->
+  <div id="quickViewModal" class="modal-overlay">
+    <div class="modal-content">
+      <i class="fa-solid fa-times modal-close"></i>
+      <img src="" alt="Product" id="modalImg" class="modal-img">
+      <div class="modal-info" style="display: flex; flex-direction: column; justify-content: center;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+          <h2 id="modalName" style="font-size: 2rem; font-family: var(--font-heading); margin-bottom: 0;"></h2>
+          <div class="stars" id="modalRating" style="color: var(--color-accent); font-size: 1rem; margin-top: 5px;"></div>
+        </div>
+
+        <p id="modalPrice" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;"></p>
+        
+        <p id="modalAvailability" style="font-weight: 500; margin-bottom: 10px; color: #2ecc71;"><i class="fa-solid fa-check-circle"></i> <span>In Stock</span></p>
+        <p id="modalCategory" style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 20px; text-transform: capitalize;"><strong>Category:</strong> <span></span></p>
+
+        <p id="modalShortDesc" style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 15px; font-style: italic;"></p>
+        <p id="modalFullDesc" style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 25px;"></p>
+        
+        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
+          <div style="display: flex; align-items: center; border: 1px solid var(--color-border); border-radius: 30px; overflow: hidden; background: #fff;">
+            <button id="modalQtyMinus" style="border: none; background: transparent; padding: 10px 15px; cursor: pointer; font-size: 1.2rem; color: var(--color-text);"><i class="fa-solid fa-minus"></i></button>
+            <span id="modalQty" style="padding: 0 15px; font-weight: bold; font-size: 1.1rem; min-width: 20px; text-align: center;">1</span>
+            <button id="modalQtyPlus" style="border: none; background: transparent; padding: 10px 15px; cursor: pointer; font-size: 1.2rem; color: var(--color-text);"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <button id="modalAddToCart" class="btn" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1rem; background: #ffc107; color: #333; border: none;"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+          <button id="modalBuyNow" class="btn btn-primary" style="flex: 1; background: #333; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1rem;" onclick="window.location.href='checkout.html'"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+          <button id="modalWishlist" class="btn btn-outline" style="width: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; padding: 0;" aria-label="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .about-craft .craft-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 80px;
+    }
+    .about-craft .craft-row:last-child {
+      margin-bottom: 0;
+    }
+    .about-craft .craft-col {
+      flex: 1;
+      width: 100%;
+    }
+    .about-craft .craft-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      transition: transform 0.5s ease;
+    }
+    .about-craft .craft-img:hover {
+      transform: scale(1.03);
+    }
+    @media (max-width: 768px) {
+      .about-craft .craft-row {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .about-craft .craft-row.mobile-reverse {
+        flex-direction: column-reverse;
+      }
+      .about-craft .craft-img {
+        height: 300px;
+      }
+    }
+  </style>
+
+  <!-- Craft & Creativity Section -->
+  <section class="section about-craft" style="background-color: var(--color-surface); padding: 80px 0; border-top: 1px solid var(--color-border);">
+    <div class="container">
+      
+      <!-- Row 1: Craft -->
+      <div class="craft-row mobile-reverse fade-up">
+        <div class="craft-col">
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); color: var(--color-text);">Craft</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-muted); margin-bottom: 15px;">
+            We take our craft very seriously. Quality, detail & exceptional design. This is what we do.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-muted);">
+            A flower bouquet is a collection of flowers in a creative arrangement. Flower bouquets can be arranged for the decor of homes or public buildings or may be handheld. Several popular shapes and styles classify handheld bouquets, including nosegay, crescent, and cascading bouquets.
+          </p>
+        </div>
+        <div class="craft-col">
+          <img src="assets/cat_wedding.webp" alt="Craft" class="craft-img">
+        </div>
+      </div>
+
+      <!-- Row 2: Creativity -->
+      <div class="craft-row fade-up" style="transition-delay: 0.2s;">
+        <div class="craft-col">
+          <img src="assets/cat_mixed.webp" alt="Creativity" class="craft-img">
+        </div>
+        <div class="craft-col">
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); color: var(--color-text);">Creativity</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-muted); margin-bottom: 15px;">
+            Creativity and our loves for flowers drive our craft. We can make it all, small or big. You name it and we can get them done and delivery to you.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-muted);">
+            The word bouquet comes from the Old French term meaning "clump of trees." Because it would be difficult for a bride to lug a clump of trees down the aisle at her wedding, thankfully the word now means "a small bunch of arranged flowers."
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       PREMIUM DARK FLORAL FOOTER
+       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  
+
+  <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+  <script src="js/shop.js"></script>
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       CINEMATIC SUNSET FOOTER
+       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <footer class="footer-cinematic">
+
+    <!-- â”€â”€ Canvas layer for fireflies + petals â”€â”€ -->
+    <canvas id="footerCanvas" class="footer-canvas" aria-hidden="true"></canvas>
+
+    <!-- â”€â”€ Background gradient layers â”€â”€ -->
+    <div class="fc-bg-gradient" aria-hidden="true">
+      <div class="fc-fog"></div>
+      <div class="fc-mesh-light ml-1"></div>
+      <div class="fc-mesh-light ml-2"></div>
+      <div class="fc-mesh-light ml-3"></div>
+      <!-- Flower field silhouette -->
+      <svg class="fc-field-silhouette" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0,180 Q40,120 80,160 Q100,100 130,150 Q160,80 200,140 Q240,60 280,130 Q320,70 360,130 Q400,50 440,130 Q480,75 520,140 Q560,55 600,130 Q640,80 680,140 Q720,60 760,135 Q800,70 840,145 Q880,50 920,130 Q960,80 1000,145 Q1040,55 1080,130 Q1120,75 1160,140 Q1200,60 1240,130 Q1280,85 1320,145 Q1360,70 1400,140 L1440,160 L1440,220 L0,220 Z" fill="#2E2330"/>
+        <!-- Flower stems -->
+        <g stroke="#3d2e4a" stroke-width="1.2" fill="none" opacity="0.6">
+          <line x1="100" y1="200" x2="105" y2="140"/>
+          <ellipse cx="105" cy="135" rx="8" ry="12" fill="#4a3d5a" stroke="none"/>
+          <line x1="250" y1="200" x2="255" y2="125"/>
+          <circle cx="255" cy="118" r="9" fill="#5c3d6e" stroke="none"/>
+          <line x1="430" y1="200" x2="435" y2="115"/>
+          <ellipse cx="435" cy="108" rx="7" ry="11" fill="#4a3560" stroke="none"/>
+          <line x1="680" y1="200" x2="685" y2="120"/>
+          <circle cx="685" cy="113" r="8" fill="#5e3d70" stroke="none"/>
+          <line x1="900" y1="200" x2="905" y2="110"/>
+          <ellipse cx="905" cy="103" rx="9" ry="13" fill="#4a3568" stroke="none"/>
+          <line x1="1100" y1="200" x2="1105" y2="125"/>
+          <circle cx="1105" cy="118" r="7" fill="#56386a" stroke="none"/>
+          <line x1="1330" y1="200" x2="1335" y2="135"/>
+          <ellipse cx="1335" cy="128" rx="8" ry="11" fill="#4e3565" stroke="none"/>
+        </g>
+      </svg>
+      <!-- Botanical border top -->
+      <svg class="fc-botanical-border fc-bb-top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C120,20 240,55 360,35 C480,15 600,50 720,30 C840,10 960,45 1080,25 C1200,5 1320,40 1440,20" stroke="rgba(242,106,141,0.12)" stroke-width="1.5" fill="none"/>
+        <path d="M0,50 C100,30 220,60 340,45 C460,30 580,55 700,40 C820,25 940,55 1060,38 C1180,22 1300,50 1440,32" stroke="rgba(216,180,106,0.08)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="container fc-inner">
+
+      <!-- â”â”â” TOP CTA â”â”â” -->
+      <div class="fc-cta-section">
+        <p class="fc-cta-pre">âœ¦ Premium Floral Studio</p>
+        <h2 class="fc-cta-heading">
+          Every Flower<br>
+          <em>Tells A Beautiful Story</em>
+        </h2>
+        <p class="fc-cta-desc">Bring your celebrations to life with handcrafted bouquets made from the freshest blooms.</p>
+        <div class="fc-cta-btns">
+          <a href="shop.html" class="fc-btn-primary">Explore Collection <span>â†’</span></a>
+          <a href="contact.html" class="fc-btn-ghost">Book Your Bouquet <span>â†’</span></a>
+        </div>
+      </div>
+
+      <!-- â”â”â” FLOATING BOUQUET â”â”â” -->
+      <div class="fc-bouquet-section" aria-hidden="true">
+        <div class="fc-glow-ring"></div>
+        <div class="fc-glow-ring fc-glow-ring-2"></div>
+        <div class="fc-bouquet-glass"></div>
+        <div class="fc-bouquet-wrap">
+          <img src="assets/footer_luxury_bouquet.jpg" alt="Premium luxury bouquet" class="fc-bouquet-img">
+        </div>
+        <!-- Orbiting petal particles -->
+        <span class="fc-orbit-petal op-1">ðŸŒ¸</span>
+        <span class="fc-orbit-petal op-2">ðŸŒ¹</span>
+        <span class="fc-orbit-petal op-3">ðŸŒ·</span>
+        <span class="fc-orbit-petal op-4">ðŸŒ¼</span>
+        <span class="fc-orbit-petal op-5">ðŸƒ</span>
+        <span class="fc-orbit-petal op-6">âœ¨</span>
+      </div>
+
+      <!-- â”â”â” FOUR GLASS CARDS â”â”â” -->
+      <div class="fc-cards-grid">
+
+        <!-- Card 1: About -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸŒº</div>
+          <h3 class="fc-card-title">About Us</h3>
+          <p class="fc-card-desc">We craft handcrafted floral stories for every milestone â€” weddings, birthdays, and life's most beautiful moments.</p>
+          <a href="about.html" class="fc-card-link">Learn More <span>â†’</span></a>
+        </div>
+
+        <!-- Card 2: Customer Care -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ’Œ</div>
+          <h3 class="fc-card-title">Customer Care</h3>
+          <ul class="fc-card-list">
+            <li><a href="404.html">Shipping</a></li>
+            <li><a href="404.html">Returns</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Collections -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ’</div>
+          <h3 class="fc-card-title">Our Collections</h3>
+          <ul class="fc-card-list">
+            <li><a href="shop.html">Wedding</a></li>
+            <li><a href="shop.html">Birthday</a></li>
+            <li><a href="shop.html">Luxury Roses</a></li>
+            <li><a href="shop.html">Indoor Plants</a></li>
+            <li><a href="shop.html">Seasonal Flowers</a></li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Visit Store -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ“</div>
+          <h3 class="fc-card-title">Visit Our Store</h3>
+          <ul class="fc-contact-list">
+            <li><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Salem â€“ 636 003</span></li>
+            <li><i class="fa-solid fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:hello@stackly.com">hello@stackly.com</a></li>
+            <li><i class="fa-regular fa-clock"></i><span>Monâ€“Sun Â· 8 AM â€“ 9 PM</span></li>
+          </ul>
+        </div>
+
+      </div><!-- /fc-cards-grid -->
+
+      <!-- â”â”â” NEWSLETTER â”â”â” -->
+      <div class="fc-newsletter-box">
+        <div class="fc-nl-deco">ðŸŒ¸</div>
+        <h3 class="fc-nl-heading">Join Our Bloom Club</h3>
+        <p class="fc-nl-desc">Receive exclusive discounts, flower care tips, and seasonal collections.</p>
+        <form class="fc-nl-form" action="404.html" onsubmit="return false;">
+          <div class="fc-nl-input-wrap">
+            <input type="email" placeholder="Your email address âœ‰" autocomplete="email">
+            <button type="submit" class="fc-nl-btn">
+              <span class="fc-nl-btn-text">Subscribe</span>
+              <span class="fc-nl-btn-icon">ðŸŒ¸</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- â”â”â” SOCIAL SECTION â”â”â” -->
+      <div class="fc-social-section">
+        <p class="fc-social-label">Follow Our Floral Journey</p>
+        <div class="fc-social-row">
+          <a href="404.html" class="fc-social-circle" aria-label="Instagram" style="--sc: #E1306C">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="Facebook" style="--sc: #1877F2">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="Pinterest" style="--sc: #E60023">
+            <i class="fa-brands fa-pinterest-p"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="WhatsApp" style="--sc: #25D366">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="YouTube" style="--sc: #FF0000">
+            <i class="fa-brands fa-youtube"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /fc-inner -->
+
+    <!-- â”â”â” BOTTOM BAR â”â”â” -->
+    <div class="fc-bottom-bar">
+      <div class="container fc-bottom-inner">
+        <p class="fc-copy">Â© 2026 Bloom &amp; Blossom</p>
+        <nav class="fc-legal" aria-label="Legal">
+          <a href="404.html">Privacy Policy</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Terms</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Cookies</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Refund Policy</a>
+        </nav>
+        <p class="fc-made">Made with â¤ï¸ for Flower Lovers</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- â”â”â” Footer Canvas Animation â”â”â” -->
+  <script>
+  (function(){
+    const canvas = document.getElementById('footerCanvas');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [], petals = [];
+
+    function resize(){
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Fireflies
+    for(let i = 0; i < 55; i++){
+      particles.push({
+        x: Math.random() * 1440,
+        y: Math.random() * H,
+        r: Math.random() * 2.2 + 0.6,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        alpha: Math.random(),
+        dAlpha: (Math.random() * 0.012 + 0.004) * (Math.random() < 0.5 ? 1 : -1),
+        color: Math.random() < 0.5 ? '#D8B46A' : '#9CCB9B'
+      });
+    }
+
+    // Petals
+    const PETALS = ['ðŸŒ¸','ðŸŒ¹','ðŸŒ·','ðŸŒ¼','ðŸƒ'];
+    for(let i = 0; i < 18; i++){
+      petals.push({
+        x: Math.random() * 1440,
+        y: Math.random() * H,
+        size: Math.random() * 14 + 10,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: Math.random() * 0.4 + 0.15,
+        rotation: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.02,
+        alpha: Math.random() * 0.4 + 0.15,
+        emoji: PETALS[Math.floor(Math.random() * PETALS.length)]
+      });
+    }
+
+    function draw(){
+      ctx.clearRect(0, 0, W, H);
+
+      // Fireflies
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        p.alpha += p.dAlpha;
+        if(p.alpha <= 0 || p.alpha >= 1) p.dAlpha *= -1;
+        if(p.x < 0) p.x = W; if(p.x > W) p.x = 0;
+        if(p.y < 0) p.y = H; if(p.y > H) p.y = 0;
+
+        const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3.5);
+        grad.addColorStop(0, p.color);
+        grad.addColorStop(1, 'transparent');
+        ctx.globalAlpha = Math.max(0, Math.min(1, p.alpha)) * 0.75;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r * 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+        ctx.globalAlpha = Math.max(0, Math.min(1, p.alpha));
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      });
+
+      // Petals
+      petals.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.rotation += p.vr;
+        if(p.y > H + 30) { p.y = -30; p.x = Math.random() * W; }
+        ctx.globalAlpha = p.alpha;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation);
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+        ctx.restore();
+      });
+
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    // Mouse parallax on bouquet
+    const bouquetWrap = document.querySelector('.fc-bouquet-wrap');
+    const footer = document.querySelector('.footer-cinematic');
+    if(bouquetWrap && footer){
+      footer.addEventListener('mousemove', e => {
+        const rect = footer.getBoundingClientRect();
+        const mx = (e.clientX - rect.left - rect.width / 2) / rect.width;
+        const my = (e.clientY - rect.top  - rect.height/ 2) / rect.height;
+        bouquetWrap.style.transform = `translateY(var(--fc-float-offset, 0px)) rotate(${mx * 3}deg) translateX(${mx * 12}px) translateY(${my * 8}px)`;
+      });
+      footer.addEventListener('mouseleave', () => {
+        bouquetWrap.style.transform = '';
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
+
+

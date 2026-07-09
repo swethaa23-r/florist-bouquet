@@ -1,0 +1,904 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Florist & Bouquet Shop offering luxury handcrafted flowers for every occasion.">
+  <title>Stackly | Premium Florist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-page">
+  <!-- Loader -->
+  <div id="loader">
+    <div class="blooming-flower">
+      <div class="petal-flower"></div>
+      <div class="petal-flower"></div>
+      <div class="petal-flower"></div>
+      <div class="petal-flower"></div>
+      <div class="center-flower"></div>
+    </div>
+    <div class="loader-text">
+      <h2>Bloom & Blossom</h2>
+      <p>Fresh Flowers &bull; Elegant Bouquets &bull; Fast Delivery</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="login.html"><i class="fa-regular fa-user" title="Account"></i></a>
+        <a href="cart.html" style="position: relative;">
+          <i class="fa-solid fa-cart-shopping" title="Cart"></i>
+          <span id="cartBadge" style="position: absolute; top: -10px; right: -10px; background: var(--color-accent); color: white; font-size: 0.75rem; padding: 2px 6px; border-radius: 12px; font-weight: bold; display: none;">0</span>
+        </a>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-premium">
+    <!-- Background Effects -->
+    <div class="hero-bg-shapes">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="glass-circle circle-1"></div>
+      <div class="glass-circle circle-2"></div>
+      <div class="sparkle-particles" id="sparkles-container"></div>
+      
+      <!-- Waving Silk Ribbons (Awwwards-style SVG Morphing Paths) -->
+      <div class="silk-ribbon">
+        <svg viewBox="0 0 1200 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="ribbon-path-1" d="M-100,200 C300,100 200,400 600,300 C1000,200 800,500 1300,400 L1300,800 L-100,800 Z" />
+          <path class="ribbon-path-2" d="M-100,400 C200,300 400,500 800,350 C1200,200 1000,600 1400,450 L1400,800 L-100,800 Z" />
+        </svg>
+      </div>
+
+      <!-- Luxury 4-Point Sparkle Stars (Drifting & Rotating SVGs) -->
+      <svg class="sparkle-star star-1" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12,0 L14.7,9.3 L24,12 L14.7,14.7 L12,24 L9.3,14.7 L0,12 L9.3,9.3 Z"/>
+      </svg>
+      <svg class="sparkle-star star-2" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12,0 L14.7,9.3 L24,12 L14.7,14.7 L12,24 L9.3,14.7 L0,12 L9.3,9.3 Z"/>
+      </svg>
+      <svg class="sparkle-star star-3" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12,0 L14.7,9.3 L24,12 L14.7,14.7 L12,24 L9.3,14.7 L0,12 L9.3,9.3 Z"/>
+      </svg>
+      
+      <!-- SVG Floral Outlines -->
+      <svg class="floral-outline outline-left" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,180 C50,150 70,110 60,60 C90,90 120,80 150,40 C130,90 140,130 180,160 C130,150 90,160 10,180 Z" stroke="rgba(94, 139, 126, 0.06)" stroke-width="1.5" fill="none"/>
+        <path d="M40,120 C55,100 70,110 80,95 C65,105 50,95 40,120 Z" stroke="rgba(94, 139, 126, 0.06)" stroke-width="1" fill="none"/>
+        <path d="M100,90 C115,75 130,85 140,70 C125,80 110,70 100,90 Z" stroke="rgba(94, 139, 126, 0.06)" stroke-width="1" fill="none"/>
+      </svg>
+      <svg class="floral-outline outline-right" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M190,180 C150,150 130,110 140,60 C110,90 80,80 50,40 C70,90 60,130 20,160 C70,150 110,160 190,180 Z" stroke="rgba(232, 93, 117, 0.06)" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="container hero-container-premium">
+      <!-- Left Content Column -->
+      <div class="hero-content-left">
+        <div class="badge-premium" data-aos="fade-down" data-aos-delay="100">
+          <span>🌸 Premium Fresh Flowers Since 2015</span>
+        </div>
+        
+        <h1 class="hero-title-premium">
+          <span class="typewriter-text" id="typewriter-h1"></span><span class="typewriter-cursor">|</span>
+        </h1>
+        
+        <p class="hero-subtitle-premium" data-aos="fade-up" data-aos-delay="400">
+          Handcrafted bouquets designed with passion for birthdays, weddings, anniversaries, and every unforgettable moment.
+        </p>
+        
+        <div class="hero-btns-premium" data-aos="fade-up" data-aos-delay="500">
+          <a href="shop.html" class="btn-premium btn-premium-primary">
+            Order Fresh Flowers <span class="arrow">→</span>
+          </a>
+          <a href="services.html" class="btn-premium btn-premium-secondary">
+            <span class="play-icon"><i class="fa-solid fa-play"></i></span> Watch Our Story
+          </a>
+        </div>
+        
+        <div class="hero-trust-premium" data-aos="fade-up" data-aos-delay="600">
+          <div class="trust-item">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span><strong>4.9</strong> Rating</span>
+          </div>
+          <div class="divider"></div>
+          <div class="trust-item">
+            <span class="num">10,000+</span>
+            <span>Happy Customers</span>
+          </div>
+          <div class="divider"></div>
+          <div class="trust-item">
+            <span class="badge-icon">🚚</span>
+            <span>Same Day Delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Column -->
+      <div class="hero-visual-right" data-aos="zoom-in" data-aos-delay="300">
+        <!-- Glowing Circular Background -->
+        <div class="glow-bg"></div>
+        
+        <!-- Glass Card Behind Bouquet -->
+        <div class="glass-backdrop"></div>
+        
+        <!-- Floating bouquet image container -->
+        <div class="bouquet-float-wrap">
+          <img src="assets/luxury_bouquet.jpg" alt="Premium luxury bouquet" class="bouquet-img-premium">
+        </div>
+
+        <!-- Floating Cards -->
+        <div class="floating-card card-top-right glass-card-premium" data-speed="2">
+          <span class="card-emoji">🚚</span>
+          <span class="card-text">Same Day Delivery</span>
+        </div>
+        
+        <div class="floating-card card-bottom-left glass-card-premium" data-speed="-1.5">
+          <span class="card-emoji">💐</span>
+          <span class="card-text">100+ Bouquet Designs</span>
+        </div>
+        
+        <div class="floating-card card-bottom-right glass-card-premium" data-speed="1.2">
+          <span class="card-emoji">🌿</span>
+          <span class="card-text">Fresh From Local Farms</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to Explore indicator -->
+    <div class="scroll-indicator-premium">
+      <span class="scroll-text">Scroll to Explore</span>
+      <span class="scroll-arrow">↓</span>
+    </div>
+  </header>
+
+  <!-- Categories -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container">
+      <div class="text-center fade-up">
+        <h2 class="section-title">Categories</h2>
+        <p class="section-subtitle">Find the perfect flowers for every occasion.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        
+        <a href="shop.html?category=roses" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; overflow: hidden; display: block; text-decoration: none;">
+          <img src="assets/cat_roses.webp" alt="Roses" style="height: 200px; width: 100%; object-fit: cover;">
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Roses</h3>
+          </div>
+        </a>
+        
+        <a href="shop.html?category=lilies" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.1s; overflow: hidden; display: block; text-decoration: none;">
+          <img src="assets/cat_lilies.webp" alt="Lilies" style="height: 200px; width: 100%; object-fit: cover;">
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Lilies</h3>
+          </div>
+        </a>
+        
+        <a href="shop.html?category=tulips" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.2s; overflow: hidden; display: block; text-decoration: none;">
+          <img src="assets/cat_tulips.webp" alt="Tulips" style="height: 200px; width: 100%; object-fit: cover;">
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Tulips</h3>
+          </div>
+        </a>
+        
+        <a href="shop.html?category=orchids" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.3s; overflow: hidden; display: block; text-decoration: none;">
+          <img src="assets/cat_orchids.webp" alt="Orchids" style="height: 200px; width: 100%; object-fit: cover;">
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Orchids</h3>
+          </div>
+        </a>
+        
+        <a href="shop.html?category=sunflowers" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; overflow: hidden; display: block; text-decoration: none;">
+          <img src="assets/cat_sunflowers.webp" alt="Sunflowers" style="height: 200px; width: 100%; object-fit: cover;">
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Sunflowers</h3>
+          </div>
+        </a>
+
+        <a href="shop.html?category=mixed" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.1s; overflow: hidden; display: block; text-decoration: none;">
+          <img src="assets/cat_mixed.webp" alt="Mixed Bouquets" style="height: 200px; width: 100%; object-fit: cover;">
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Mixed Bouquets</h3>
+          </div>
+        </a>
+
+        <a href="shop.html?category=wedding" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.2s; overflow: hidden; display: block; text-decoration: none;">
+          <img src="assets/cat_wedding.webp" alt="Wedding Flowers" style="height: 200px; width: 100%; object-fit: cover;">
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Wedding Flowers</h3>
+          </div>
+        </a>
+
+        <a href="shop.html?category=sympathy" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.3s; overflow: hidden; display: block; text-decoration: none;">
+          <img src="assets/cat_sympathy.webp" alt="Sympathy Flowers" style="height: 200px; width: 100%; object-fit: cover;">
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Sympathy Flowers</h3>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Bouquets -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <h2 class="section-title">Featured Bouquets</h2>
+        <p class="section-subtitle">Discover our most loved luxury arrangements.</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <!-- Product 1 -->
+        <div class="product-card glass slide-in-left">
+          <div class="product-img-wrapper">
+            <img src="assets/feat_1.webp" alt="Blush Romance" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Blush<br>Romance</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">A delicate blend of pink roses and baby's breath.</p>
+            <div class="product-rating" style="justify-content: center;">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="product-price">$85.00</p>
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+              <button class="action-btn" title="Add to Cart" style="background: #ffc107; color: #333;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card glass zoom-in" style="transition-delay: 0.1s;">
+          <div class="product-img-wrapper">
+            <img src="assets/feat_2.webp" alt="Lavender Dreams" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Lavender Dreams</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">Elegant purple hues for a calming, luxurious vibe.</p>
+            <div class="product-rating" style="justify-content: center;">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="product-price">$95.00</p>
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+              <button class="action-btn" title="Add to Cart" style="background: #ffc107; color: #333;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card glass slide-in-right" style="transition-delay: 0.2s;">
+          <div class="product-img-wrapper">
+            <img src="assets/feat_3.webp" alt="Golden Sunflowers" class="product-img">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Golden Sunflowers</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">Bright, cheerful sunflowers to light up any room.</p>
+            <div class="product-rating" style="justify-content: center;">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            </div>
+            <p class="product-price">$65.00</p>
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+              <button class="action-btn" title="Add to Cart" style="background: #ffc107; color: #333;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container text-center fade-up">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-subtitle">We deliver happiness, one bouquet at a time.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px;">
+        <div class="fade-up">
+          <i class="fa-solid fa-leaf" style="font-size: 3rem; color: var(--color-success); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="100" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">100%</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Fresh Flowers Daily</h4>
+        </div>
+        
+        <div class="fade-up" style="transition-delay: 0.1s;">
+          <i class="fa-solid fa-truck-fast" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="24" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">24h</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Same Day Delivery</h4>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.2s;">
+          <i class="fa-solid fa-hand-holding-heart" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="50" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">50+</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Handcrafted Arrangements</h4>
+        </div>
+        
+        <div class="fade-up" style="transition-delay: 0.3s;">
+          <i class="fa-solid fa-tag" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="15" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">15%</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Affordable Prices (Off)</h4>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.4s;">
+          <i class="fa-solid fa-crown" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="1" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">1st</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Premium Quality</h4>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.5s;">
+          <i class="fa-regular fa-face-smile" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="100" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">100%</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Satisfaction</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="section">
+    <div class="container fade-up">
+      <div class="text-center">
+        <h2 class="section-title">Best Sellers</h2>
+        <p class="section-subtitle">Our most popular arrangements of the season.</p>
+      </div>
+      
+      <div class="carousel-container">
+        <div class="carousel-track">
+          
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/best_1.webp" alt="Ruby Red" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Ruby Red</h3>
+                <p class="product-price">$75.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/best_2.webp" alt="Spring Awakening" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Spring Awakening</h3>
+                <p class="product-price">$110.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/best_3.webp" alt="White Elegance" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">White Elegance</h3>
+                <p class="product-price">$120.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/prod_thumb2.webp" alt="Golden Sunset" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Golden Sunset</h3>
+                <p class="product-price">$85.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/prod_thumb3.webp" alt="Purple Majesty" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Purple Majesty</h3>
+                <p class="product-price">$95.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/prod_thumb4.webp" alt="Blushing Beauty" class="product-img">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Blushing Beauty</h3>
+                <p class="product-price">$105.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container fade-up">
+      <div class="text-center">
+        <h2 class="section-title">What They Say</h2>
+        <p class="section-subtitle">Customer reviews and testimonials.</p>
+      </div>
+      
+      <div class="carousel-container" style="max-width: 800px; margin: 0 auto; overflow: hidden; padding: 20px 15px;">
+        <div class="carousel-track" style="display: flex; gap: 30px;">
+          
+          <div class="carousel-slide" style="flex: 0 0 100%; box-sizing: border-box;">
+            <div class="testimonial-card glass" style="padding: 30px 20px;">
+              <img src="assets/test_1.webp" alt="Customer" class="testimonial-img">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 15px; font-size: 1rem;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: clamp(0.9rem, 4vw, 1.1rem); margin-bottom: 20px; line-height: 1.6;">"The most beautiful bouquet I've ever received! The flowers were so fresh and lasted for weeks. Highly recommended!"</p>
+              <h4 style="font-family: var(--font-body); font-size: clamp(1rem, 5vw, 1.2rem);">- Emily R.</h4>
+            </div>
+          </div>
+          
+          <div class="carousel-slide" style="flex: 0 0 100%; box-sizing: border-box;">
+            <div class="testimonial-card glass" style="padding: 30px 20px;">
+              <img src="assets/test_2.webp" alt="Customer" class="testimonial-img">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 15px; font-size: 1rem;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: clamp(0.9rem, 4vw, 1.1rem); margin-bottom: 20px; line-height: 1.6;">"Exceptional service. Ordered a custom arrangement for our wedding anniversary and they absolutely nailed the aesthetic we wanted."</p>
+              <h4 style="font-family: var(--font-body); font-size: clamp(1rem, 5vw, 1.2rem);">- Mark T.</h4>
+            </div>
+          </div>
+
+          <div class="carousel-slide" style="flex: 0 0 100%; box-sizing: border-box;">
+            <div class="testimonial-card glass" style="padding: 30px 20px;">
+              <img src="assets/test_3.webp" alt="Customer" class="testimonial-img">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 15px; font-size: 1rem;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: clamp(0.9rem, 4vw, 1.1rem); margin-bottom: 20px; line-height: 1.6;">"Fast delivery and the packaging was stunning. It's my go-to florist for all special occasions now."</p>
+              <h4 style="font-family: var(--font-body); font-size: clamp(1rem, 5vw, 1.2rem);">- Sarah K.</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Gallery -->
+  <section class="section" style="padding: 0;">
+    <div class="insta-grid">
+      <div class="insta-item fade-up">
+        <img src="assets/insta_1.webp" alt="Instagram 1">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.1s;">
+        <img src="assets/insta_2.webp" alt="Instagram 2">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.2s;">
+        <img src="assets/insta_3.webp" alt="Instagram 3">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.3s;">
+        <img src="assets/insta_4.webp" alt="Instagram 4">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.4s;">
+        <img src="assets/insta_5.webp" alt="Instagram 5">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.5s;">
+        <img src="assets/insta_6.webp" alt="Instagram 6">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section" style="background: var(--color-secondary); color: #333; position: relative; overflow: hidden;">
+    <!-- The floating petals will be added here globally by script.js -->
+    <div class="container text-center fade-up" style="position: relative; z-index: 2;">
+      <h2 class="section-title" style="color: #333;">Bloom With Us</h2>
+      <p style="margin-bottom: 30px; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Subscribe to receive exclusive offers, seasonal flower collections, and floral inspiration.</p>
+      <form action="404.html" style="display: flex; justify-content: center; max-width: 500px; margin: 0 auto; gap: 10px;">
+        <input type="email" placeholder="Your Email Address" required style="padding: 15px 20px; border-radius: 30px; border: none; width: 100%; outline: none; font-family: var(--font-body);">
+        <button type="submit" class="btn btn-primary" style="background: #333; color: #fff;">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer (White background as requested) -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       PREMIUM DARK FLORAL FOOTER
+       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  
+
+  <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-content">
+      <i class="fa-solid fa-xmark modal-close" id="closeModal"></i>
+      <img src="" alt="Product" class="modal-img" id="modalImg">
+      <div class="modal-info">
+        <h2 id="modalTitle" style="font-family: var(--font-heading); margin-bottom: 10px;">Product Name</h2>
+        <p id="modalPrice" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold; margin-bottom: 20px;">$0.00</p>
+        <p style="color: var(--color-text-muted); margin-bottom: 20px;">This beautiful arrangement is handcrafted by our expert florists to bring joy to your special moments.</p>
+        <button class="btn" style="background: #ffc107; color: #333; border: none;" onclick="showToast('Added to Cart!')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" style="position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%); background: var(--color-text); color: white; padding: 15px 30px; border-radius: 50px; z-index: 10001; transition: bottom 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+    Item Added!
+  </div>
+
+  <script src="js/script.js"></script>
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       CINEMATIC SUNSET FOOTER
+       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <footer class="footer-cinematic">
+
+    <!-- â”€â”€ Canvas layer for fireflies + petals â”€â”€ -->
+    <canvas id="footerCanvas" class="footer-canvas" aria-hidden="true"></canvas>
+
+    <!-- â”€â”€ Background gradient layers â”€â”€ -->
+    <div class="fc-bg-gradient" aria-hidden="true">
+      <div class="fc-fog"></div>
+      <div class="fc-mesh-light ml-1"></div>
+      <div class="fc-mesh-light ml-2"></div>
+      <div class="fc-mesh-light ml-3"></div>
+      <!-- Flower field silhouette -->
+      <svg class="fc-field-silhouette" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0,180 Q40,120 80,160 Q100,100 130,150 Q160,80 200,140 Q240,60 280,130 Q320,70 360,130 Q400,50 440,130 Q480,75 520,140 Q560,55 600,130 Q640,80 680,140 Q720,60 760,135 Q800,70 840,145 Q880,50 920,130 Q960,80 1000,145 Q1040,55 1080,130 Q1120,75 1160,140 Q1200,60 1240,130 Q1280,85 1320,145 Q1360,70 1400,140 L1440,160 L1440,220 L0,220 Z" fill="#2E2330"/>
+        <!-- Flower stems -->
+        <g stroke="#3d2e4a" stroke-width="1.2" fill="none" opacity="0.6">
+          <line x1="100" y1="200" x2="105" y2="140"/>
+          <ellipse cx="105" cy="135" rx="8" ry="12" fill="#4a3d5a" stroke="none"/>
+          <line x1="250" y1="200" x2="255" y2="125"/>
+          <circle cx="255" cy="118" r="9" fill="#5c3d6e" stroke="none"/>
+          <line x1="430" y1="200" x2="435" y2="115"/>
+          <ellipse cx="435" cy="108" rx="7" ry="11" fill="#4a3560" stroke="none"/>
+          <line x1="680" y1="200" x2="685" y2="120"/>
+          <circle cx="685" cy="113" r="8" fill="#5e3d70" stroke="none"/>
+          <line x1="900" y1="200" x2="905" y2="110"/>
+          <ellipse cx="905" cy="103" rx="9" ry="13" fill="#4a3568" stroke="none"/>
+          <line x1="1100" y1="200" x2="1105" y2="125"/>
+          <circle cx="1105" cy="118" r="7" fill="#56386a" stroke="none"/>
+          <line x1="1330" y1="200" x2="1335" y2="135"/>
+          <ellipse cx="1335" cy="128" rx="8" ry="11" fill="#4e3565" stroke="none"/>
+        </g>
+      </svg>
+      <!-- Botanical border top -->
+      <svg class="fc-botanical-border fc-bb-top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C120,20 240,55 360,35 C480,15 600,50 720,30 C840,10 960,45 1080,25 C1200,5 1320,40 1440,20" stroke="rgba(242,106,141,0.12)" stroke-width="1.5" fill="none"/>
+        <path d="M0,50 C100,30 220,60 340,45 C460,30 580,55 700,40 C820,25 940,55 1060,38 C1180,22 1300,50 1440,32" stroke="rgba(216,180,106,0.08)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="container fc-inner">
+
+      <!-- â”â”â” TOP CTA â”â”â” -->
+      <div class="fc-cta-section">
+        <p class="fc-cta-pre">âœ¦ Premium Floral Studio</p>
+        <h2 class="fc-cta-heading">
+          Every Flower<br>
+          <em>Tells A Beautiful Story</em>
+        </h2>
+        <p class="fc-cta-desc">Bring your celebrations to life with handcrafted bouquets made from the freshest blooms.</p>
+        <div class="fc-cta-btns">
+          <a href="shop.html" class="fc-btn-primary">Explore Collection <span>â†’</span></a>
+          <a href="contact.html" class="fc-btn-ghost">Book Your Bouquet <span>â†’</span></a>
+        </div>
+      </div>
+
+      <!-- â”â”â” FLOATING BOUQUET â”â”â” -->
+      <div class="fc-bouquet-section" aria-hidden="true">
+        <div class="fc-glow-ring"></div>
+        <div class="fc-glow-ring fc-glow-ring-2"></div>
+        <div class="fc-bouquet-glass"></div>
+        <div class="fc-bouquet-wrap">
+          <img src="assets/footer_luxury_bouquet.jpg" alt="Premium luxury bouquet" class="fc-bouquet-img">
+        </div>
+        <!-- Orbiting petal particles -->
+        <span class="fc-orbit-petal op-1">ðŸŒ¸</span>
+        <span class="fc-orbit-petal op-2">ðŸŒ¹</span>
+        <span class="fc-orbit-petal op-3">ðŸŒ·</span>
+        <span class="fc-orbit-petal op-4">ðŸŒ¼</span>
+        <span class="fc-orbit-petal op-5">ðŸƒ</span>
+        <span class="fc-orbit-petal op-6">âœ¨</span>
+      </div>
+
+      <!-- â”â”â” FOUR GLASS CARDS â”â”â” -->
+      <div class="fc-cards-grid">
+
+        <!-- Card 1: About -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸŒº</div>
+          <h3 class="fc-card-title">About Us</h3>
+          <p class="fc-card-desc">We craft handcrafted floral stories for every milestone â€” weddings, birthdays, and life's most beautiful moments.</p>
+          <a href="about.html" class="fc-card-link">Learn More <span>â†’</span></a>
+        </div>
+
+        <!-- Card 2: Customer Care -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ’Œ</div>
+          <h3 class="fc-card-title">Customer Care</h3>
+          <ul class="fc-card-list">
+            <li><a href="404.html">Shipping</a></li>
+            <li><a href="404.html">Returns</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Collections -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ’</div>
+          <h3 class="fc-card-title">Our Collections</h3>
+          <ul class="fc-card-list">
+            <li><a href="shop.html">Wedding</a></li>
+            <li><a href="shop.html">Birthday</a></li>
+            <li><a href="shop.html">Luxury Roses</a></li>
+            <li><a href="shop.html">Indoor Plants</a></li>
+            <li><a href="shop.html">Seasonal Flowers</a></li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Visit Store -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ“</div>
+          <h3 class="fc-card-title">Visit Our Store</h3>
+          <ul class="fc-contact-list">
+            <li><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Salem â€“ 636 003</span></li>
+            <li><i class="fa-solid fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:hello@stackly.com">hello@stackly.com</a></li>
+            <li><i class="fa-regular fa-clock"></i><span>Monâ€“Sun Â· 8 AM â€“ 9 PM</span></li>
+          </ul>
+        </div>
+
+      </div><!-- /fc-cards-grid -->
+
+      <!-- â”â”â” NEWSLETTER â”â”â” -->
+      <div class="fc-newsletter-box">
+        <div class="fc-nl-deco">ðŸŒ¸</div>
+        <h3 class="fc-nl-heading">Join Our Bloom Club</h3>
+        <p class="fc-nl-desc">Receive exclusive discounts, flower care tips, and seasonal collections.</p>
+        <form class="fc-nl-form" action="404.html" onsubmit="return false;">
+          <div class="fc-nl-input-wrap">
+            <input type="email" placeholder="Your email address âœ‰" autocomplete="email">
+            <button type="submit" class="fc-nl-btn">
+              <span class="fc-nl-btn-text">Subscribe</span>
+              <span class="fc-nl-btn-icon">ðŸŒ¸</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- â”â”â” SOCIAL SECTION â”â”â” -->
+      <div class="fc-social-section">
+        <p class="fc-social-label">Follow Our Floral Journey</p>
+        <div class="fc-social-row">
+          <a href="404.html" class="fc-social-circle" aria-label="Instagram" style="--sc: #E1306C">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="Facebook" style="--sc: #1877F2">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="Pinterest" style="--sc: #E60023">
+            <i class="fa-brands fa-pinterest-p"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="WhatsApp" style="--sc: #25D366">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="YouTube" style="--sc: #FF0000">
+            <i class="fa-brands fa-youtube"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /fc-inner -->
+
+    <!-- â”â”â” BOTTOM BAR â”â”â” -->
+    <div class="fc-bottom-bar">
+      <div class="container fc-bottom-inner">
+        <p class="fc-copy">Â© 2026 Bloom &amp; Blossom</p>
+        <nav class="fc-legal" aria-label="Legal">
+          <a href="404.html">Privacy Policy</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Terms</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Cookies</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Refund Policy</a>
+        </nav>
+        <p class="fc-made">Made with â¤ï¸ for Flower Lovers</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- â”â”â” Footer Canvas Animation â”â”â” -->
+  <script>
+  (function(){
+    const canvas = document.getElementById('footerCanvas');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [], petals = [];
+
+    function resize(){
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Fireflies
+    for(let i = 0; i < 55; i++){
+      particles.push({
+        x: Math.random() * 1440,
+        y: Math.random() * H,
+        r: Math.random() * 2.2 + 0.6,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        alpha: Math.random(),
+        dAlpha: (Math.random() * 0.012 + 0.004) * (Math.random() < 0.5 ? 1 : -1),
+        color: Math.random() < 0.5 ? '#D8B46A' : '#9CCB9B'
+      });
+    }
+
+    // Petals
+    const PETALS = ['ðŸŒ¸','ðŸŒ¹','ðŸŒ·','ðŸŒ¼','ðŸƒ'];
+    for(let i = 0; i < 18; i++){
+      petals.push({
+        x: Math.random() * 1440,
+        y: Math.random() * H,
+        size: Math.random() * 14 + 10,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: Math.random() * 0.4 + 0.15,
+        rotation: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.02,
+        alpha: Math.random() * 0.4 + 0.15,
+        emoji: PETALS[Math.floor(Math.random() * PETALS.length)]
+      });
+    }
+
+    function draw(){
+      ctx.clearRect(0, 0, W, H);
+
+      // Fireflies
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        p.alpha += p.dAlpha;
+        if(p.alpha <= 0 || p.alpha >= 1) p.dAlpha *= -1;
+        if(p.x < 0) p.x = W; if(p.x > W) p.x = 0;
+        if(p.y < 0) p.y = H; if(p.y > H) p.y = 0;
+
+        const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3.5);
+        grad.addColorStop(0, p.color);
+        grad.addColorStop(1, 'transparent');
+        ctx.globalAlpha = Math.max(0, Math.min(1, p.alpha)) * 0.75;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r * 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+        ctx.globalAlpha = Math.max(0, Math.min(1, p.alpha));
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      });
+
+      // Petals
+      petals.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.rotation += p.vr;
+        if(p.y > H + 30) { p.y = -30; p.x = Math.random() * W; }
+        ctx.globalAlpha = p.alpha;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation);
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+        ctx.restore();
+      });
+
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    // Mouse parallax on bouquet
+    const bouquetWrap = document.querySelector('.fc-bouquet-wrap');
+    const footer = document.querySelector('.footer-cinematic');
+    if(bouquetWrap && footer){
+      footer.addEventListener('mousemove', e => {
+        const rect = footer.getBoundingClientRect();
+        const mx = (e.clientX - rect.left - rect.width / 2) / rect.width;
+        const my = (e.clientY - rect.top  - rect.height/ 2) / rect.height;
+        bouquetWrap.style.transform = `translateY(var(--fc-float-offset, 0px)) rotate(${mx * 3}deg) translateX(${mx * 12}px) translateY(${my * 8}px)`;
+      });
+      footer.addEventListener('mouseleave', () => {
+        bouquetWrap.style.transform = '';
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
+
+

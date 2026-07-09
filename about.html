@@ -1,0 +1,677 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Stackly - Our passion for luxury handcrafted flowers.">
+  <title>About Us | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <i class="fa-solid fa-seedling loader-icon"></i>
+    <b><p>Fresh Flowers. Elegant Bouquets. Fast Delivery</p></b>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="login.html"><i class="fa-regular fa-user" title="Account"></i></a>
+        <a href="cart.html" style="position: relative;">
+          <i class="fa-solid fa-cart-shopping" title="Cart"></i>
+          <span id="cartBadge" style="position: absolute; top: -10px; right: -10px; background: var(--color-accent); color: white; font-size: 0.75rem; padding: 2px 6px; border-radius: 12px; font-weight: bold; display: none;">0</span>
+        </a>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Hero Section -->
+  <header class="hero-about-premium">
+    <!-- Background Effects -->
+    <div class="hero-bg-shapes">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="glass-circle circle-1"></div>
+      <div class="glass-circle circle-2"></div>
+      <div class="sparkle-particles" id="sparkles-container"></div>
+      
+      <!-- Subtle Animated Floral Vines around the edges -->
+      <svg class="floral-vine vine-top-left" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 Q30,10 20,50 T50,80 Q40,90 20,100" stroke="rgba(94, 139, 126, 0.04)" stroke-width="1.2"/>
+        <path d="M0,20 Q15,25 10,40" stroke="rgba(94, 139, 126, 0.04)" stroke-width="0.8"/>
+      </svg>
+      <svg class="floral-vine vine-bottom-right" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100,100 Q70,90 80,50 T50,20 Q60,10 80,0" stroke="rgba(232, 93, 117, 0.04)" stroke-width="1.2"/>
+      </svg>
+    </div>
+
+    <div class="container hero-container-about">
+      <!-- Left Column: Storytelling Content -->
+      <div class="hero-content-left">
+        <div class="badge-premium" data-aos="fade-down" data-aos-delay="100">
+          <span>🌸 Our Story Since 2015</span>
+        </div>
+        
+        <h1 class="hero-title-premium" data-aos="fade-up" data-aos-delay="200">
+          Crafting <span class="highlight-beautiful">Beautiful</span><br>
+          Moments Through Flowers
+        </h1>
+        
+        <p class="hero-subtitle-premium" data-aos="fade-up" data-aos-delay="300">
+          Every bouquet tells a story. We carefully handcraft fresh floral arrangements using premium blooms to celebrate life's most meaningful moments. From birthdays and weddings to everyday surprises, our passion is turning emotions into unforgettable floral experiences.
+        </p>
+        
+        <div class="hero-btns-premium" data-aos="fade-up" data-aos-delay="400">
+          <a href="#ourStorySection" class="btn-premium btn-premium-primary">
+            Discover Our Story <span class="arrow">→</span>
+          </a>
+          <a href="#ourFloristsSection" class="btn-premium btn-premium-secondary">
+            Meet Our Florists
+          </a>
+        </div>
+        
+        <!-- Trust Indicators Checklist -->
+        <div class="trust-checklist-about" data-aos="fade-up" data-aos-delay="500">
+          <span class="checklist-item"><i class="fa-solid fa-check"></i> 10,000+ Happy Customers</span>
+          <span class="checklist-item"><i class="fa-solid fa-check"></i> 150+ Premium Flower Designs</span>
+          <span class="checklist-item"><i class="fa-solid fa-check"></i> Same Day Delivery</span>
+          <span class="checklist-item"><i class="fa-solid fa-check"></i> Fresh Flowers Daily</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Lifestyle Studio Visual -->
+      <div class="hero-visual-right-about" data-aos="zoom-in" data-aos-delay="300">
+        <!-- Glowing Ambient Circle -->
+        <div class="glow-bg"></div>
+        
+        <!-- Large Glassmorphic Panel Behind Image -->
+        <div class="glass-backdrop-about"></div>
+        
+        <!-- Decorative Botanical Frame -->
+        <div class="botanical-frame-about"></div>
+
+        <!-- Florist Studio Image wrapper -->
+        <div class="studio-image-wrap">
+          <img src="assets/about_hero_florist.jpg" alt="Florist arranging flowers in studio" class="studio-img-premium">
+        </div>
+
+        <!-- Floating Quote Card -->
+        <div class="floating-quote-card glass" data-speed="0.8">
+          <span class="quote-mark">“</span>
+          <p class="quote-text">Flowers are the poetry of nature.</p>
+        </div>
+
+        <!-- Floating Flower Elements -->
+        <span class="floating-flower rose-1" data-speed="1.2">🌹</span>
+        <span class="floating-flower lily-1" data-speed="-1.0">🌼</span>
+        <span class="floating-flower tulip-1" data-speed="1.5">🌷</span>
+        <span class="floating-flower orchid-1" data-speed="-1.3">🌸</span>
+        <span class="floating-flower leaf-1" data-speed="1.7">🌿</span>
+
+        <!-- Dynamic Statistics Cards -->
+        <div class="floating-stat-card stat-experience glass" data-speed="1.5">
+          <span class="stat-emoji">🌷</span>
+          <div class="stat-details">
+            <span class="stat-num">10+ Years</span>
+            <span class="stat-desc">Experience</span>
+          </div>
+        </div>
+        
+        <div class="floating-stat-card stat-delivered glass" data-speed="-1.8">
+          <span class="stat-emoji">💐</span>
+          <div class="stat-details">
+            <span class="stat-num">20k+</span>
+            <span class="stat-desc">Delivered</span>
+          </div>
+        </div>
+        
+        <div class="floating-stat-card stat-fresh glass" data-speed="2.0">
+          <span class="stat-emoji">🌿</span>
+          <div class="stat-details">
+            <span class="stat-num">100%</span>
+            <span class="stat-desc">Fresh Blooms</span>
+          </div>
+        </div>
+        
+        <div class="floating-stat-card stat-rating glass" data-speed="-1.4">
+          <span class="stat-emoji">⭐</span>
+          <div class="stat-details">
+            <span class="stat-num">4.9/5</span>
+            <span class="stat-desc">Customers Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Company Story -->
+  <section class="section" id="ourStorySection" style="background-color: var(--color-bg);">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+        <div style="flex: 1; min-width: 250px;" class="slide-in-left">
+          <img src="assets/best_3.webp" alt="Our Story" style="border-radius: var(--radius); box-shadow: var(--glass-shadow); width: 100%; height: auto;">
+        </div>
+        <div style="flex: 1; min-width: 250px;" class="slide-in-right" style="transition-delay: 0.2s;">
+          <h2 class="section-title">Our Story</h2>
+          <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 20px;">Founded in 2010, Stackly began as a tiny family-owned floral studio with a simple dream: to craft luxurious, emotion-evoking floral arrangements that speak louder than words.</p>
+          <p style="color: var(--color-text-muted); line-height: 1.8;">Over the past decade, we have grown into the city's premier florist, yet our core philosophy remains unchanged. We hand-select every stem, ensuring that only the freshest, most vibrant blooms make it into our signature bouquets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+        <div class="glass fade-up" style="padding: 40px; text-align: center;">
+          <i class="fa-solid fa-bullseye" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 20px;"></i>
+          <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Our Mission</h3>
+          <p style="color: var(--color-text-muted); line-height: 1.6;">To deliver unparalleled joy and elegance by curating the finest, sustainably-sourced flowers and transforming them into breathtaking works of art for every milestone.</p>
+        </div>
+        <div class="glass fade-up" style="padding: 40px; text-align: center; transition-delay: 0.2s;">
+          <i class="fa-regular fa-eye" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+          <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Our Vision</h3>
+          <p style="color: var(--color-text-muted); line-height: 1.6;">To become the world's most beloved luxury floral brand, renowned for our creativity, exceptional customer service, and unwavering commitment to environmental sustainability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Florists -->
+  <section class="section" id="ourFloristsSection">
+    <div class="container">
+      <div class="text-center fade-up">
+        <h2 class="section-title">Our Master Florists</h2>
+        <p class="section-subtitle">Meet the creative hands behind our magical arrangements.</p>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-member slide-in-left">
+          <div class="team-img-wrapper">
+            <img src="assets/test_1.webp" alt="Florist" class="team-img">
+          </div>
+          <h3>Amelia Rose</h3>
+          <p style="color: var(--color-primary); margin-bottom: 10px;">Lead Designer</p>
+          <div class="team-socials">
+            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <div class="team-member zoom-in" style="transition-delay: 0.2s;">
+          <div class="team-img-wrapper">
+            <img src="assets/test_2.webp" alt="Florist" class="team-img">
+          </div>
+          <h3>Julian Hart</h3>
+          <p style="color: var(--color-primary); margin-bottom: 10px;">Wedding Specialist</p>
+          <div class="team-socials">
+            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <div class="team-member slide-in-right" style="transition-delay: 0.4s;">
+          <div class="team-img-wrapper">
+            <img src="assets/test_3.webp" alt="Florist" class="team-img">
+          </div>
+          <h3>Sophia Lane</h3>
+          <p style="color: var(--color-primary); margin-bottom: 10px;">Botanical Expert</p>
+          <div class="team-socials">
+            <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container fade-up">
+      <div class="text-center">
+        <h2 class="section-title">Our Journey</h2>
+        <p class="section-subtitle">Milestones that blossomed our brand.</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item left fade-up">
+          <div class="timeline-content glass">
+            <h3 style="color: var(--color-accent);">2010</h3>
+            <p>Stackly opens its first small boutique studio.</p>
+          </div>
+        </div>
+        <div class="timeline-item right fade-up">
+          <div class="timeline-content glass">
+            <h3 style="color: var(--color-accent);">2014</h3>
+            <p>Launched our exclusive wedding & events floral division.</p>
+          </div>
+        </div>
+        <div class="timeline-item left fade-up">
+          <div class="timeline-content glass">
+            <h3 style="color: var(--color-accent);">2018</h3>
+            <p>Expanded to nationwide next-day delivery service.</p>
+          </div>
+        </div>
+        <div class="timeline-item right fade-up">
+          <div class="timeline-content glass">
+            <h3 style="color: var(--color-accent);">2022</h3>
+            <p>Voted "Best Luxury Florist" by National Lifestyle Magazine.</p>
+          </div>
+        </div>
+        <div class="timeline-item left fade-up">
+          <div class="timeline-content glass">
+            <h3 style="color: var(--color-accent);">Present</h3>
+            <p>Continuing to spread love and joy with over 100k happy customers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+        <div class="glass fade-up" style="padding: 30px;">
+          <h3 class="counter-value" data-target="150" style="font-size: 3rem; color: var(--color-primary);">0</h3><span style="font-size: 2rem;">k+</span>
+          <p style="color: var(--color-text-muted); margin-top: 10px;">Bouquets Delivered</p>
+        </div>
+        <div class="glass fade-up" style="padding: 30px; transition-delay: 0.2s;">
+          <h3 class="counter-value" data-target="2500" style="font-size: 3rem; color: var(--color-accent);">0</h3><span style="font-size: 2rem;">+</span>
+          <p style="color: var(--color-text-muted); margin-top: 10px;">Weddings Styled</p>
+        </div>
+        <div class="glass fade-up" style="padding: 30px; transition-delay: 0.4s;">
+          <h3 class="counter-value" data-target="12" style="font-size: 3rem; color: var(--color-primary);">0</h3>
+          <p style="color: var(--color-text-muted); margin-top: 10px;">Years of Excellence</p>
+        </div>
+        <div class="glass fade-up" style="padding: 30px; transition-delay: 0.6s;">
+          <h3 class="counter-value" data-target="100" style="font-size: 3rem; color: var(--color-accent);">0</h3><span style="font-size: 2rem;">%</span>
+          <p style="color: var(--color-text-muted); margin-top: 10px;">Organic Sourcing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container fade-up">
+      <div class="text-center">
+        <h2 class="section-title">Studio Gallery</h2>
+        <p class="section-subtitle">A glimpse into our creative space.</p>
+      </div>
+      <div class="insta-grid">
+        <div class="insta-item"><img src="assets/insta_1.webp" alt="Gallery"></div>
+        <div class="insta-item"><img src="assets/insta_2.webp" alt="Gallery"></div>
+        <div class="insta-item"><img src="assets/insta_3.webp" alt="Gallery"></div>
+        <div class="insta-item"><img src="assets/insta_4.webp" alt="Gallery"></div>
+        <div class="insta-item"><img src="assets/insta_5.webp" alt="Gallery"></div>
+        <div class="insta-item"><img src="assets/insta_6.webp" alt="Gallery"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="section">
+    <div class="container text-center fade-up">
+      <h2 class="section-title">Certificates & Awards</h2>
+      <p class="section-subtitle">Recognized for our unmatched quality and service.</p>
+      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 40px;">
+        <div class="glass" style="padding: 20px; border-radius: 50%; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <i class="fa-solid fa-award" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 10px;"></i>
+          <span style="font-size: 0.8rem; font-weight: bold;">Top Florist 2022</span>
+        </div>
+        <div class="glass" style="padding: 20px; border-radius: 50%; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <i class="fa-solid fa-leaf" style="font-size: 3rem; color: var(--color-success); margin-bottom: 10px;"></i>
+          <span style="font-size: 0.8rem; font-weight: bold;">Eco-Certified</span>
+        </div>
+        <div class="glass" style="padding: 20px; border-radius: 50%; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <i class="fa-solid fa-ribbon" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 10px;"></i>
+          <span style="font-size: 0.8rem; font-weight: bold;">Best Wedding</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: var(--color-secondary); color: #333; text-align: center;">
+    <div class="container fade-up" style="position: relative; z-index: 2;">
+      <h2 class="section-title" style="color: #333;">Let Us Craft Your Next Memory</h2>
+      <p style="margin-bottom: 30px; font-size: 1.1rem;">Whether it's a grand wedding or a simple "I love you", our flowers say it all.</p>
+      <a href="shop.html" class="btn btn-primary" style="background: #333; color: #fff; margin-right: 15px;">Shop Now</a>
+      <a href="contact.html" class="btn btn-outline" style="border-color: #333; color: #333;">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       PREMIUM DARK FLORAL FOOTER
+       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  
+
+  <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       CINEMATIC SUNSET FOOTER
+       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <footer class="footer-cinematic">
+
+    <!-- â”€â”€ Canvas layer for fireflies + petals â”€â”€ -->
+    <canvas id="footerCanvas" class="footer-canvas" aria-hidden="true"></canvas>
+
+    <!-- â”€â”€ Background gradient layers â”€â”€ -->
+    <div class="fc-bg-gradient" aria-hidden="true">
+      <div class="fc-fog"></div>
+      <div class="fc-mesh-light ml-1"></div>
+      <div class="fc-mesh-light ml-2"></div>
+      <div class="fc-mesh-light ml-3"></div>
+      <!-- Flower field silhouette -->
+      <svg class="fc-field-silhouette" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0,180 Q40,120 80,160 Q100,100 130,150 Q160,80 200,140 Q240,60 280,130 Q320,70 360,130 Q400,50 440,130 Q480,75 520,140 Q560,55 600,130 Q640,80 680,140 Q720,60 760,135 Q800,70 840,145 Q880,50 920,130 Q960,80 1000,145 Q1040,55 1080,130 Q1120,75 1160,140 Q1200,60 1240,130 Q1280,85 1320,145 Q1360,70 1400,140 L1440,160 L1440,220 L0,220 Z" fill="#2E2330"/>
+        <!-- Flower stems -->
+        <g stroke="#3d2e4a" stroke-width="1.2" fill="none" opacity="0.6">
+          <line x1="100" y1="200" x2="105" y2="140"/>
+          <ellipse cx="105" cy="135" rx="8" ry="12" fill="#4a3d5a" stroke="none"/>
+          <line x1="250" y1="200" x2="255" y2="125"/>
+          <circle cx="255" cy="118" r="9" fill="#5c3d6e" stroke="none"/>
+          <line x1="430" y1="200" x2="435" y2="115"/>
+          <ellipse cx="435" cy="108" rx="7" ry="11" fill="#4a3560" stroke="none"/>
+          <line x1="680" y1="200" x2="685" y2="120"/>
+          <circle cx="685" cy="113" r="8" fill="#5e3d70" stroke="none"/>
+          <line x1="900" y1="200" x2="905" y2="110"/>
+          <ellipse cx="905" cy="103" rx="9" ry="13" fill="#4a3568" stroke="none"/>
+          <line x1="1100" y1="200" x2="1105" y2="125"/>
+          <circle cx="1105" cy="118" r="7" fill="#56386a" stroke="none"/>
+          <line x1="1330" y1="200" x2="1335" y2="135"/>
+          <ellipse cx="1335" cy="128" rx="8" ry="11" fill="#4e3565" stroke="none"/>
+        </g>
+      </svg>
+      <!-- Botanical border top -->
+      <svg class="fc-botanical-border fc-bb-top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C120,20 240,55 360,35 C480,15 600,50 720,30 C840,10 960,45 1080,25 C1200,5 1320,40 1440,20" stroke="rgba(242,106,141,0.12)" stroke-width="1.5" fill="none"/>
+        <path d="M0,50 C100,30 220,60 340,45 C460,30 580,55 700,40 C820,25 940,55 1060,38 C1180,22 1300,50 1440,32" stroke="rgba(216,180,106,0.08)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="container fc-inner">
+
+      <!-- â”â”â” TOP CTA â”â”â” -->
+      <div class="fc-cta-section">
+        <p class="fc-cta-pre">âœ¦ Premium Floral Studio</p>
+        <h2 class="fc-cta-heading">
+          Every Flower<br>
+          <em>Tells A Beautiful Story</em>
+        </h2>
+        <p class="fc-cta-desc">Bring your celebrations to life with handcrafted bouquets made from the freshest blooms.</p>
+        <div class="fc-cta-btns">
+          <a href="shop.html" class="fc-btn-primary">Explore Collection <span>â†’</span></a>
+          <a href="contact.html" class="fc-btn-ghost">Book Your Bouquet <span>â†’</span></a>
+        </div>
+      </div>
+
+      <!-- â”â”â” FLOATING BOUQUET â”â”â” -->
+      <div class="fc-bouquet-section" aria-hidden="true">
+        <div class="fc-glow-ring"></div>
+        <div class="fc-glow-ring fc-glow-ring-2"></div>
+        <div class="fc-bouquet-glass"></div>
+        <div class="fc-bouquet-wrap">
+          <img src="assets/footer_luxury_bouquet.jpg" alt="Premium luxury bouquet" class="fc-bouquet-img">
+        </div>
+        <!-- Orbiting petal particles -->
+        <span class="fc-orbit-petal op-1">ðŸŒ¸</span>
+        <span class="fc-orbit-petal op-2">ðŸŒ¹</span>
+        <span class="fc-orbit-petal op-3">ðŸŒ·</span>
+        <span class="fc-orbit-petal op-4">ðŸŒ¼</span>
+        <span class="fc-orbit-petal op-5">ðŸƒ</span>
+        <span class="fc-orbit-petal op-6">âœ¨</span>
+      </div>
+
+      <!-- â”â”â” FOUR GLASS CARDS â”â”â” -->
+      <div class="fc-cards-grid">
+
+        <!-- Card 1: About -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸŒº</div>
+          <h3 class="fc-card-title">About Us</h3>
+          <p class="fc-card-desc">We craft handcrafted floral stories for every milestone â€” weddings, birthdays, and life's most beautiful moments.</p>
+          <a href="about.html" class="fc-card-link">Learn More <span>â†’</span></a>
+        </div>
+
+        <!-- Card 2: Customer Care -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ’Œ</div>
+          <h3 class="fc-card-title">Customer Care</h3>
+          <ul class="fc-card-list">
+            <li><a href="404.html">Shipping</a></li>
+            <li><a href="404.html">Returns</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Collections -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ’</div>
+          <h3 class="fc-card-title">Our Collections</h3>
+          <ul class="fc-card-list">
+            <li><a href="shop.html">Wedding</a></li>
+            <li><a href="shop.html">Birthday</a></li>
+            <li><a href="shop.html">Luxury Roses</a></li>
+            <li><a href="shop.html">Indoor Plants</a></li>
+            <li><a href="shop.html">Seasonal Flowers</a></li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Visit Store -->
+        <div class="fc-glass-card">
+          <div class="fc-card-icon">ðŸ“</div>
+          <h3 class="fc-card-title">Visit Our Store</h3>
+          <ul class="fc-contact-list">
+            <li><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Salem â€“ 636 003</span></li>
+            <li><i class="fa-solid fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:hello@stackly.com">hello@stackly.com</a></li>
+            <li><i class="fa-regular fa-clock"></i><span>Monâ€“Sun Â· 8 AM â€“ 9 PM</span></li>
+          </ul>
+        </div>
+
+      </div><!-- /fc-cards-grid -->
+
+      <!-- â”â”â” NEWSLETTER â”â”â” -->
+      <div class="fc-newsletter-box">
+        <div class="fc-nl-deco">ðŸŒ¸</div>
+        <h3 class="fc-nl-heading">Join Our Bloom Club</h3>
+        <p class="fc-nl-desc">Receive exclusive discounts, flower care tips, and seasonal collections.</p>
+        <form class="fc-nl-form" action="404.html" onsubmit="return false;">
+          <div class="fc-nl-input-wrap">
+            <input type="email" placeholder="Your email address âœ‰" autocomplete="email">
+            <button type="submit" class="fc-nl-btn">
+              <span class="fc-nl-btn-text">Subscribe</span>
+              <span class="fc-nl-btn-icon">ðŸŒ¸</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- â”â”â” SOCIAL SECTION â”â”â” -->
+      <div class="fc-social-section">
+        <p class="fc-social-label">Follow Our Floral Journey</p>
+        <div class="fc-social-row">
+          <a href="404.html" class="fc-social-circle" aria-label="Instagram" style="--sc: #E1306C">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="Facebook" style="--sc: #1877F2">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="Pinterest" style="--sc: #E60023">
+            <i class="fa-brands fa-pinterest-p"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="WhatsApp" style="--sc: #25D366">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+          <a href="404.html" class="fc-social-circle" aria-label="YouTube" style="--sc: #FF0000">
+            <i class="fa-brands fa-youtube"></i>
+            <span class="fc-social-ripple"></span>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /fc-inner -->
+
+    <!-- â”â”â” BOTTOM BAR â”â”â” -->
+    <div class="fc-bottom-bar">
+      <div class="container fc-bottom-inner">
+        <p class="fc-copy">Â© 2026 Bloom &amp; Blossom</p>
+        <nav class="fc-legal" aria-label="Legal">
+          <a href="404.html">Privacy Policy</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Terms</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Cookies</a>
+          <span class="fc-dot">Â·</span>
+          <a href="404.html">Refund Policy</a>
+        </nav>
+        <p class="fc-made">Made with â¤ï¸ for Flower Lovers</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- â”â”â” Footer Canvas Animation â”â”â” -->
+  <script>
+  (function(){
+    const canvas = document.getElementById('footerCanvas');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [], petals = [];
+
+    function resize(){
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Fireflies
+    for(let i = 0; i < 55; i++){
+      particles.push({
+        x: Math.random() * 1440,
+        y: Math.random() * H,
+        r: Math.random() * 2.2 + 0.6,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        alpha: Math.random(),
+        dAlpha: (Math.random() * 0.012 + 0.004) * (Math.random() < 0.5 ? 1 : -1),
+        color: Math.random() < 0.5 ? '#D8B46A' : '#9CCB9B'
+      });
+    }
+
+    // Petals
+    const PETALS = ['ðŸŒ¸','ðŸŒ¹','ðŸŒ·','ðŸŒ¼','ðŸƒ'];
+    for(let i = 0; i < 18; i++){
+      petals.push({
+        x: Math.random() * 1440,
+        y: Math.random() * H,
+        size: Math.random() * 14 + 10,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: Math.random() * 0.4 + 0.15,
+        rotation: Math.random() * Math.PI * 2,
+        vr: (Math.random() - 0.5) * 0.02,
+        alpha: Math.random() * 0.4 + 0.15,
+        emoji: PETALS[Math.floor(Math.random() * PETALS.length)]
+      });
+    }
+
+    function draw(){
+      ctx.clearRect(0, 0, W, H);
+
+      // Fireflies
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        p.alpha += p.dAlpha;
+        if(p.alpha <= 0 || p.alpha >= 1) p.dAlpha *= -1;
+        if(p.x < 0) p.x = W; if(p.x > W) p.x = 0;
+        if(p.y < 0) p.y = H; if(p.y > H) p.y = 0;
+
+        const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3.5);
+        grad.addColorStop(0, p.color);
+        grad.addColorStop(1, 'transparent');
+        ctx.globalAlpha = Math.max(0, Math.min(1, p.alpha)) * 0.75;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r * 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+        ctx.globalAlpha = Math.max(0, Math.min(1, p.alpha));
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      });
+
+      // Petals
+      petals.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.rotation += p.vr;
+        if(p.y > H + 30) { p.y = -30; p.x = Math.random() * W; }
+        ctx.globalAlpha = p.alpha;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation);
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+        ctx.restore();
+      });
+
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    // Mouse parallax on bouquet
+    const bouquetWrap = document.querySelector('.fc-bouquet-wrap');
+    const footer = document.querySelector('.footer-cinematic');
+    if(bouquetWrap && footer){
+      footer.addEventListener('mousemove', e => {
+        const rect = footer.getBoundingClientRect();
+        const mx = (e.clientX - rect.left - rect.width / 2) / rect.width;
+        const my = (e.clientY - rect.top  - rect.height/ 2) / rect.height;
+        bouquetWrap.style.transform = `translateY(var(--fc-float-offset, 0px)) rotate(${mx * 3}deg) translateX(${mx * 12}px) translateY(${my * 8}px)`;
+      });
+      footer.addEventListener('mouseleave', () => {
+        bouquetWrap.style.transform = '';
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
+
+
